@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 import Utility.IO;
+import Utility.Read;
 
 public class Main {
 
@@ -91,9 +92,6 @@ public class Main {
         System.out.println("\nInserisci un secondo numero, anche decimale:");
         Double n2 = scanner.nextDouble();
         
-        scanner.close();
-
-        
         
         // Metodi statici: non richiedono l'istanza di un oggetto
         IO.pl("\tIl nome del programmatore è " + OperazioniBase.getNomeProgrammatore());
@@ -113,5 +111,31 @@ public class Main {
         IO.pt("La divisione di " + n1 + " e " + n2 + " è " + div);
         IO.pt("Il resto della divisione intera di " + n1 + " e " + n2 + " è " + mod);
         
+        
+        IO.sepL();
+        
+        // Utility di lettura
+        IO.pl("Utilizziamo la classe Read per leggere input:");
+        IO.pl("Scrivi qualcosa:");
+        String str = Read.readStr();
+        IO.pt("Hai scritto: " + str);
+
+        IO.pl("Scrivi un intero:");
+        Integer num = Read.readInt();
+        IO.pt("Hai scritto: " + num);
+
+        IO.pl("Scrivi un decimale:");
+        Double dbl = Read.readDouble();
+        IO.pt("Hai scritto: " + dbl);
+
+        IO.pl("Scrivi un booleano:");
+        Boolean bool = Read.readBoolean();
+        IO.pt("Hai scritto: " + bool);
+
+        IO.pl("Scrivi un carattere:");
+        Character ch = Read.readChar();
+        IO.pt("Hai scritto: " + ch);
+
+        Read.closeScanner();
 	}
 }
