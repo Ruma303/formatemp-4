@@ -19,6 +19,7 @@ public class BuonaEducazione {
 	
 	// ----------------------------------------------------------------
 	
+	
 	// Variabili di istanza
 	
 	// Per usarli bisogna istanziare un oggetto di questa classe
@@ -27,6 +28,7 @@ public class BuonaEducazione {
 	
 	public Double a;
 	public Double b;
+	
 	
 	// ----------------------------------------------------------------
 	
@@ -46,6 +48,7 @@ public class BuonaEducazione {
 	
 	// ----------------------------------------------------------------
 	
+    
 	// Variabile di classe
 	// Si possono utilizzare senza istanziare un oggetto
     
@@ -54,6 +57,7 @@ public class BuonaEducazione {
 
 	
 	// ----------------------------------------------------------------
+	
 	
 	// Metodi "di istanza".
 	// Richiedono l'istanziamento di questa classe
@@ -66,6 +70,7 @@ public class BuonaEducazione {
 	public void ringrazia(){
 		System.out.println("\tGrazie!");	
 	}
+	
 	
 	// ----------------------------------------------------------------
 	

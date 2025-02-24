@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import Utility.IO;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -18,49 +20,50 @@ public class Main {
 		be.saluta();
 		be.ringrazia();
 
-		System.out.println("\r\n================================\n");
 		
+		IO.sepL(); // Separatore di linea della classe Utility
+		 
 		// Assegnamo le variabili di istanza all'oggetto be 
 		be.a = 10.0;
 		be.b = 20.0;
 		
-		System.out.println("Valori assegnati alle variabili dell'oggetto be:");
-		System.out.println("\ta = " + be.a + ", b = " + be.b);
+		IO.pl("Valori assegnati alle variabili dell'oggetto be:");
+		IO.pl("\ta = " + be.a + ", b = " + be.b);
 		
 		// L'oggetto be2 non ha le stesse variabili di istanza
 		// Si chiamano variabili di istanza in quanto il loro valore
 		// è specifico per ogni oggetto, lo stato non è condiviso
 		// tra oggetti.
 		
-		System.out.println("Valori assegnati alle variabili dell'oggetto be2:");
-		System.out.println("\ta = " + be2.a + ", b = " + be2.b);
+		IO.pl("Valori assegnati alle variabili dell'oggetto be2:");
+		IO.pl("\ta = " + be2.a + ", b = " + be2.b);
 		
 		// Viceversa, le variabili di classe (con la parola static)
 		// sono condivise e accessibili da tutti gli oggetti della classe
-        System.out.println("\nVariabile di classe:");
-        System.out.println("\tOggetto be, valore c = " + be.c);
-        System.out.println("\tOggetto be2, valore c = " + be.c);
+        IO.pl("\nVariabile di classe:");
+        IO.pl("\tOggetto be, valore c = " + be.c);
+        IO.pl("\tOggetto be2, valore c = " + be.c);
         
         // Anche le variabili di classe possono essere modificate
-        System.out.println("\nAggiorniamo il valore della variabile di classe c usando l'oggetto be.c");
+        IO.pl("\nAggiorniamo il valore della variabile di classe c usando l'oggetto be.c");
         be.c = "\"Nuovo valore condiviso\"";
-        System.out.println("\t" + be.c);
+        IO.pl("\t" + be.c);
         
-        System.out.println("\nVariabile di classe dopo la modifica:");
+        IO.pl("\nVariabile di classe dopo la modifica:");
         
         // Essendo una variabile CONDIVISA in ogni istanza, tutte le istanze di BuonaEducazione
         // cambieranno il valore della variabile statica c
-        System.out.println("\tNuovo valore be2.c = " +be2.c);
+        IO.pl("\tNuovo valore be2.c = " +be2.c);
         
-        System.out.println("\nEssendo c una variabile di classe, possiamo modificarla richiamandola direttamente dalla classe:");
+        IO.pl("\nEssendo c una variabile di classe, possiamo modificarla richiamandola direttamente dalla classe:");
         BuonaEducazione.c = "\"Ancora un altro valore della variabile c\"";
-        System.out.println("\tNuovo valore BuonaEducazione.c = " + BuonaEducazione.c);
+        IO.pl("\tNuovo valore BuonaEducazione.c = " + BuonaEducazione.c);
         
         // Il nuovo valore di BuonaEducazione.c sarà condiviso con tutti gli oggetti da questa classe.
         
         
         
-        System.out.println("\r\n================================");
+        IO.sepL();
 
 		// In questo esempio prendiamo i numeri da tastiera
 		Scanner scanner = new Scanner(System.in);
@@ -76,20 +79,22 @@ public class Main {
         
         
         // Metodi statici: non richiedono l'istanza di un oggetto
-        System.out.println("\tIl nome del programmatore è " + OperazioniBase.getNomeProgrammatore());
+        IO.pl("\tIl nome del programmatore è " + OperazioniBase.getNomeProgrammatore());
 		
-        
         Double sum = OperazioniBase.somma(n1, n2);
         Double diff = OperazioniBase.differenza(n1, n2);
         Double mul = OperazioniBase.moltiplicazione(n1, n2);
         Double div = OperazioniBase.divisione(n1, n2);
         Double mod = OperazioniBase.divisioneIntera(n1, n2);
+          
         
-        System.out.println("\nMetodi di classe:");
-        System.out.println("\tLa somma di " + n1 + " e " + n2 + " è " + sum);    
-        System.out.println("\tLa differenza di " + n1 + " e " + n2 + " è " + diff);
-        System.out.println("\tIl prodotto di " + n1 + " e " + n2 + " è " + mul);
-        System.out.println("\tLa divisione di " + n1 + " e " + n2 + " è " + div);
-        System.out.println("\tIl resto della divisione intera di " + n1 + " e " + n2 + " è " + mod);
+        // Utilizziamo il metodo statico IO.pl() della classe d'utility
+        IO.pt("\nMetodi di classe:");
+        IO.pt("La somma di " + n1 + " e " + n2 + " è " + sum);    
+        IO.pt("La differenza di " + n1 + " e " + n2 + " è " + diff);
+        IO.pt("Il prodotto di " + n1 + " e " + n2 + " è " + mul);
+        IO.pt("La divisione di " + n1 + " e " + n2 + " è " + div);
+        IO.pt("Il resto della divisione intera di " + n1 + " e " + n2 + " è " + mod);
+        
 	}
 }
