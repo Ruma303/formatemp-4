@@ -9,6 +9,9 @@ import java.nio.file.*;
  */
 public class IO {
 	
+	// Costante per riferirsi alla classe stessa
+	public static final Class<?> SELF = IO.class;
+	
 	// Crea solo una nuova linea (Print line)
 	public static void pl() {
 		System.out.println("\n");

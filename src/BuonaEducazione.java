@@ -1,3 +1,4 @@
+import Utility.IO;
 
 public class BuonaEducazione {
 	
@@ -7,7 +8,7 @@ public class BuonaEducazione {
     // quando si crea un oggetto da questa classe.
 	
 	public BuonaEducazione() {
-        System.out.println("Costruttore attivato\n");
+        System.out.println("Costruttore della classe " + IO.getClassName(this) + " attivato\n");
     }
 	
 	// In realtà, in Java ogni classe ha un costruttore di default.
