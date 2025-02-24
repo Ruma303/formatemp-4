@@ -33,7 +33,7 @@ public class Read {
         }
     }
 
-    public static Double readDouble() {
+    public static Double readDec() {
         try {
             while (!scanner.hasNextDouble()) {
                 System.out.println("Errore: Inserisci un numero decimale valido.");
@@ -49,7 +49,7 @@ public class Read {
         }
     }
 
-    public static Boolean readBoolean() {
+    public static Boolean readBool() {
         try {
             while (!scanner.hasNextBoolean()) {
                 System.out.println("Errore: Inserisci 'true' o 'false'.");

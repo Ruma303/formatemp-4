@@ -125,11 +125,11 @@ public class Main {
         IO.pt("Hai scritto: " + num);
 
         IO.pl("Scrivi un decimale:");
-        Double dbl = Read.readDouble();
+        Double dbl = Read.readDec();
         IO.pt("Hai scritto: " + dbl);
 
         IO.pl("Scrivi un booleano:");
-        Boolean bool = Read.readBoolean();
+        Boolean bool = Read.readBool();
         IO.pt("Hai scritto: " + bool);
 
         IO.pl("Scrivi un carattere:");
