@@ -10,7 +10,6 @@ public class Main {
 		
 		// Metodi di istanza: richiedono l'istanza di un oggetto
 		System.out.println("Metodi di istanza:");
-		System.out.println("\tIl nome del programmatore è " + be.getNomeProgrammatore());
 		
 		be.saluta();
 		be.ringrazia();
@@ -55,7 +54,9 @@ public class Main {
         
         
         // Metodi statici: non richiedono l'istanza di un oggetto
+        System.out.println("\tIl nome del programmatore è " + OperazioniBase.getNomeProgrammatore());
 		
+        
         Double sum = OperazioniBase.somma(n1, n2);
         Double diff = OperazioniBase.differenza(n1, n2);
         Double mul = OperazioniBase.moltiplicazione(n1, n2);
