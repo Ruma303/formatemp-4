@@ -37,6 +37,24 @@ public class Main {
         System.out.println("\tOggetto be, valore c = " + be.c);
         System.out.println("\tOggetto be2, valore c = " + be.c);
         
+        // Anche le variabili di classe possono essere modificate
+        System.out.println("\nAggiorniamo il valore della variabile di classe c usando l'oggetto be.c");
+        be.c = "\"Nuovo valore condiviso\"";
+        System.out.println("\t" + be.c);
+        
+        System.out.println("\nVariabile di classe dopo la modifica:");
+        
+        // Essendo una variabile CONDIVISA in ogni istanza, tutte le istanze di BuonaEducazione
+        // cambieranno il valore della variabile statica c
+        System.out.println("\tNuovo valore be2.c = " +be2.c);
+        
+        System.out.println("\nEssendo c una variabile di classe, possiamo modificarla richiamandola direttamente dalla classe:");
+        BuonaEducazione.c = "\"Ancora un altro valore della variabile c\"";
+        System.out.println("\tNuovo valore BuonaEducazione.c = " + BuonaEducazione.c);
+        
+        // Il nuovo valore di BuonaEducazione.c sarà condiviso con tutti gli oggetti da questa classe.
+        
+        
         System.out.println("\r\n================================");
 
 		// In questo esempio prendiamo i numeri da tastiera
