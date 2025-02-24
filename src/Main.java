@@ -8,6 +8,10 @@ public class Main {
 		BuonaEducazione be = new BuonaEducazione();	
 		BuonaEducazione be2 = new BuonaEducazione();			
 		
+		// Se abbiamo creato un costruttore personalizzato, verrà attivato quello al posto
+		// del costruttore di default
+		
+		
 		// Metodi di istanza: richiedono l'istanza di un oggetto
 		System.out.println("Metodi di istanza:");
 		
@@ -55,6 +59,7 @@ public class Main {
         // Il nuovo valore di BuonaEducazione.c sarà condiviso con tutti gli oggetti da questa classe.
         
         
+        
         System.out.println("\r\n================================");
 
 		// In questo esempio prendiamo i numeri da tastiera
@@ -67,8 +72,7 @@ public class Main {
         Double n2 = scanner.nextDouble();
         
         scanner.close();
-        
-        
+
         
         
         // Metodi statici: non richiedono l'istanza di un oggetto
@@ -83,10 +87,9 @@ public class Main {
         
         System.out.println("\nMetodi di classe:");
         System.out.println("\tLa somma di " + n1 + " e " + n2 + " è " + sum);    
-        System.out.println("\tLa differenza di " + n1 + " e " + n2 + " è " + diff);    
+        System.out.println("\tLa differenza di " + n1 + " e " + n2 + " è " + diff);
         System.out.println("\tIl prodotto di " + n1 + " e " + n2 + " è " + mul);
         System.out.println("\tLa divisione di " + n1 + " e " + n2 + " è " + div);
         System.out.println("\tIl resto della divisione intera di " + n1 + " e " + n2 + " è " + mod);
 	}
-
 }
