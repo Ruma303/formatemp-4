@@ -34,13 +34,20 @@ public class IO {
 		System.out.println("\n=================================================\n");
 	}
 	
+	// Ritorna il nome della classe di un oggetto
+	public static String getClassName(Object o) {
+		return o.getClass().getName();
+	}
+	
+	// Ritorna la classe di un oggetto
 	public static Object getClass(Object o) {
 		return o.getClass();
 	}
 	
-	public static String getClassName(Object o) {
-		return o.getClass().getName();
-	}
+	// Esempio, ritorniamo esattamente il nome di questa classe
+//	public static String getClassName() {
+//        return IO.class.getName();
+//    }
 	
 	/**
 	 * @param path = Percorso relativo
