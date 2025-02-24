@@ -56,11 +56,11 @@ public class Main {
         
         // Metodi statici: non richiedono l'istanza di un oggetto
 		
-        Double sum = BuonaEducazione.somma(n1, n2);
-        Double diff = BuonaEducazione.differenza(n1, n2);
-        Double mul = BuonaEducazione.moltiplicazione(n1, n2);
-        Double div = BuonaEducazione.divisione(n1, n2);
-        Double mod = BuonaEducazione.divisioneIntera(n1, n2);
+        Double sum = OperazioniBase.somma(n1, n2);
+        Double diff = OperazioniBase.differenza(n1, n2);
+        Double mul = OperazioniBase.moltiplicazione(n1, n2);
+        Double div = OperazioniBase.divisione(n1, n2);
+        Double mod = OperazioniBase.divisioneIntera(n1, n2);
         
         System.out.println("\nMetodi di classe:");
         System.out.println("\tLa somma di " + n1 + " e " + n2 + " è " + sum);    
