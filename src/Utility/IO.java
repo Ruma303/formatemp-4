@@ -34,6 +34,14 @@ public class IO {
 		System.out.println("\n=================================================\n");
 	}
 	
+	public static Object getClass(Object o) {
+		return o.getClass();
+	}
+	
+	public static String getClassName(Object o) {
+		return o.getClass().getName();
+	}
+	
 	/**
 	 * @param path = Percorso relativo
 	 */

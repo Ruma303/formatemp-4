@@ -21,8 +21,25 @@ public class Main {
 		be.ringrazia();
 
 		
-		IO.sepL(); // Separatore di linea della classe Utility
-		 
+		// Separatore di linea della classe Utility
+		IO.sepL(); 
+		
+		IO.pl("Per verificare quale classe appartiene questa istanza possiamo usare questi metodi concatenati sulle loro istanze");
+		
+		IO.pl("L'oggetto be fa parte della classe: " + be.getClass().getName());
+		IO.pl("L'oggetto be2 fa parte della classe: " + be2.getClass().getName());
+		IO.pl("Quest'altro oggetto fa parte della classe: " + OperazioniBase.class.getName());	
+		IO.pl("Mentre quest'altro oggetto fa parte della classe: " + IO.class.getName());	
+		IO.pl("Oppure, usando il metodo IO.getClassName() della classe Utility, esempio su be2: " + IO.getClassName(be2));
+		
+		IO io = new IO();
+		Object myClass = IO.getClass(io);
+		IO.pl("Recuperiamo anche il riferimento all'intera classe tramite IO.getClass(): " + myClass);
+		
+		IO.sepL();
+		
+		
+		
 		// Assegnamo le variabili di istanza all'oggetto be 
 		be.a = 10.0;
 		be.b = 20.0;
